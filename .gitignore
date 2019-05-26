@@ -1,0 +1,5 @@
+# macOS-specific binary file
+.DS_Store
+
+# image directory
+/visualizations/

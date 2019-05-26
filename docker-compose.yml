@@ -1,0 +1,21 @@
+version: '3'
+services:
+  sqlpandas:
+    container_name: sqlpandas
+    build: .
+    image: sqlpandas:latest
+    environment:
+      - MSSQL_SERVER=db
+      - MSSQL_DB=master
+      - UID=SA
+      - PWD=DockerExample2019
+    volumes:
+      - ./visualizations:/app/visualizations
+    depends_on:
+      - db
+  db:
+    container_name: sqlpandas_db
+    image: mcr.microsoft.com/mssql/server
+    environment:
+      - ACCEPT_EULA=Y
+      - SA_PASSWORD=DockerExample2019
