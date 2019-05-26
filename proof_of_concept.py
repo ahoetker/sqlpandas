@@ -14,9 +14,8 @@ import matplotlib.pyplot as plt
 def create_engine() -> sqlalchemy.engine.base.Engine:
     """
     Creates the database engine needed to interact with the server.
-    Ideally, this function would be different in two ways:
-    First, environment variables could be read using os.getenv so that a plaintext file doesn't have passwords in it.
-    Second, the network could use Active Domain/Windows Authentication. This would remove the need for UID and PWD
+    Ideally, this function would be different in one way:
+    The network could use Active Domain/Windows Authentication. This would remove the need for UID and PWD
     parameters in the connection string, instead using Trusted_Connection=True.
     """
     DRIVER = r"{ODBC Driver 17 for SQL Server}"
