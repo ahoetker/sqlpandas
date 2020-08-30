@@ -15,5 +15,5 @@ jobs:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
           registry: docker.pkg.github.com
-          repository: ahoetker/sqlpandas
+          repository: ahoetker/sqlpandas/sqlpandas
           tag_with_ref: true
