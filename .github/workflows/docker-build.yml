@@ -8,9 +8,6 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
-      
-      - name: Docker GitHub login
-        uses: 
     
       - name: Build and push Docker images
         uses: docker/build-push-action@v1
@@ -18,5 +15,5 @@ jobs:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
           registry: docker.pkg.github.com
-          repository: ahoetker/sqlpandas/sqlpandas
+          repository: ahoetker/sqlpandas
           tag_with_ref: true
